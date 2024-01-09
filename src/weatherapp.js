@@ -34,13 +34,16 @@ const WeatherApp = () => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city name"
+          data-testid="city-input"
         />
-        <button onClick={getWeather}>search</button>
+        <button onClick={getWeather} data-testid="search-button">
+          search
+        </button>
       </div>
-      {isLoading && <p className="loading-msg">Loading data...</p>}
+      {isLoading && <p>Loading data...</p>}
       {error && <div className="error">{error}</div>}
       {weatherData && (
-        <div className="weather-info">
+        <div className="weather-card">
           <h2>
             {weatherData.location.name}, {weatherData.location.country}
           </h2>
