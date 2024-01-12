@@ -17,7 +17,8 @@ function App() {
       const response = await fetch(`${apiUrl}?key=${apiKey}&q=${city}`);
       const data = await response.json();
 
-      if (data.error) {
+      if (!response.ok) {
+        console.error("Error:", response.status, response.statusText);
         alert("Failed to fetch weather data. Please enter a valid city name.");
       } else {
         setWeatherData(data);
