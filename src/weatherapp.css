@@ -10,11 +10,15 @@ body {
 .search-container {
   margin-bottom: 20px;
 }
-
+#input {
+  border-radius: 5px;
+}
 .input[type="text"],
 button {
-  background-color: rgb(129, 243, 129);
+  color: white;
+  background-color: rgb(27, 238, 27);
   border-radius: 5px;
+  border-color: none;
   margin: 3px;
   padding: 5px;
 }
