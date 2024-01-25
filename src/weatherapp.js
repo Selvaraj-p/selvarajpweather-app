@@ -7,7 +7,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const apiKey = "1a2675ae8d5c4e058e582110232909";
+  const apiKey = "41340db4700e4554a9e73658231311";
   const apiUrl = "https://api.weatherapi.com/v1/current.json";
 
   const getWeather = async () => {
